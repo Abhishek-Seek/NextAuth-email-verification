@@ -2,6 +2,18 @@
 import { Form, Input, Button, Card, message } from "antd";
 import { useState } from "react";
 
+
+
+
+
+
+type FormData = {
+    fullname: string;
+    email: string;
+    phone: string;
+    subject: string;
+};
+
 export default function SignIn() {
     const [form] = Form.useForm();
     const [emailVerified, setEmailVerified] = useState(false);
@@ -44,7 +56,9 @@ export default function SignIn() {
         }
     };
 
-    const handleFormSubmit = async (values: any) => {
+
+
+    const handleFormSubmit = async (values:FormData) => {
         if (!emailVerified) return message.warning("Please verify your email first");
 
         const res = await fetch("/api/submit-form", {
@@ -94,7 +108,7 @@ export default function SignIn() {
                                 { required: true, message: "Please enter email" },
                                 { type: "email", message: "Enter valid email" },
                             ]}
-                            style={{ marginBottom: 8,paddingBottom:10 }}
+                            style={{ marginBottom: 8, paddingBottom: 10 }}
                         >
                             <Input size="large" placeholder="Enter your email" disabled={emailVerified} />
                         </Form.Item>
@@ -137,7 +151,7 @@ export default function SignIn() {
                             label="Phone Number"
                             name="phone"
                             rules={[{ required: true, message: "Please enter phone number" }]}
-                            style={{paddingTop:12}}
+                            style={{ paddingTop: 12 }}
                         >
                             <Input size="large" placeholder="Enter your phone number" />
                         </Form.Item>

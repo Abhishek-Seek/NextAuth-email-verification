@@ -1,10 +1,7 @@
 "use client";
 import { Form, Input, Button, Card, message } from "antd";
 import { useState } from "react";
-
-
-
-
+import { toast } from "react-toastify";
 
 
 type FormData = {
@@ -31,10 +28,10 @@ export default function SignIn() {
         });
 
         if (res.ok) {
-            message.success("OTP sent to your email");
+            toast.success("OTP sent to your email");
             setOtpSent(true);
         } else {
-            message.error("Failed to send OTP");
+            toast.error("Failed to send OTP");
         }
     };
 
@@ -49,10 +46,10 @@ export default function SignIn() {
         });
 
         if (res.ok) {
-            message.success("OTP Verified!");
+            toast.success("OTP Verified!");
             setEmailVerified(true);
         } else {
-            message.error("Invalid OTP");
+            toast.error("Invalid OTP");
         }
     };
 
@@ -68,13 +65,13 @@ export default function SignIn() {
         });
 
         if (res.ok) {
-            message.success("Form submitted successfully!");
+            toast.success("Form submitted successfully!");
             form.resetFields();
             // setOtp("");
             setEmailVerified(false);
             setOtpSent(false);
         } else {
-            message.error("Form submission failed");
+            toast.error("Form submission failed");
         }
     };
 

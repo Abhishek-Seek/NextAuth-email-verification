@@ -1,5 +1,6 @@
 "use client";
 import { Form, Input, Button, Card, message } from "antd";
+import TextArea from "antd/es/input/TextArea";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -169,7 +170,8 @@ export default function SignIn() {
               name="subject"
               rules={[{ required: true, message: "Please enter subject" }]}
             >
-              <Input size="large" placeholder="Enter subject" />
+              {/* <Input size="large" placeholder="Enter subject" /> */}
+              <TextArea rows={4} size="large" placeholder="Enter subject"/>
             </Form.Item>
 
             <Form.Item>

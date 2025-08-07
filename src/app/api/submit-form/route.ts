@@ -29,18 +29,18 @@ export async function POST(request: Request) {
     const info = await transporter.sendMail({
       from: `"Mabsol Infotech" <${process.env.EMAIL_USER}>`,
       to: "mabsolinfotech@gmail.com",
-      subject: `📝 New Form Submission from ${name}`,
+      subject: `📝 Contact Us Submission from ${name}`,
       html: `
   <div style="max-width: 600px; margin: auto; padding: 20px; font-family: Arial, sans-serif; background-color: #ffffff; border: 1px solid #eee;">
     <!-- Header -->
-    <div style="background-color: #1e40af; color: white; padding: 20px; border-radius: 6px 6px 0 0; text-align: center;">
+    <div style="background-color: #185e9a; color: white; padding: 20px; border-radius: 6px 6px 0 0; text-align: center;">
       <h2 style="margin: 0;">Mabsol Infotech Pvt. Ltd.</h2>
       <p style="margin: 5px 0 0; font-size: 13px;">Secure & Smart Form Submission</p>
     </div>
 
     <!-- Body -->
     <div style="padding: 20px;">
-      <h3 style="color: #1e40af; margin-top: 0;">New Form Submission</h3>
+      <h3 style="color: #1e40af; margin-top: 0;">Contact Us Submission</h3>
 
       <p><strong>Dear Admin,</strong></p>
       <p>You have received a new contact form submission. Here are the details:</p>

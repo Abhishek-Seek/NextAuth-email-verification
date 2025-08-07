@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     html: `<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
   <div style="max-width: 600px; margin: auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
     <!-- Header -->
-    <div style="background-color: #1565c0; color: white; padding: 20px; text-align: center;">
+    <div style="background-color: #185e9a; color: white; padding: 20px; text-align: center;">
       <h2 style="margin: 0;">Mabsol Infotech Pvt. Ltd.</h2>
     </div>
 

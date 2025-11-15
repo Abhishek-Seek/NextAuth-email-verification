@@ -90,7 +90,7 @@ export default function SignIn() {
           Resource Mabsol Infotech portals.
         </p>
         <Button className="!bg-green-600 !text-white !py-5 !mt-10 !mb-6">
-          Get Pricing Details
+          Get Demo Form
         </Button>
       </div>
 
